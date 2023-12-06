@@ -5,10 +5,13 @@ import time
 import struct
 import cv2
 import pickle
+
 HOST = socket.gethostname()
 host_ip = socket.gethostbyname(HOST)
 PORT = 6000 # You can use any port between 0 to 65535
+
 print(f'{host_ip}')
+
 active_clients = [] # List of all currently connected users
 FORMAT = 'utf-8'
 # Function to listen for upcoming messages from a client
@@ -319,7 +322,6 @@ def main():
         print(f"Connection Succesfull {client} {address}")
 
         threading.Thread(target=client_handler, args=(client, )).start()
-
 
 if __name__ == '__main__':
     main()
