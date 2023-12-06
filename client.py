@@ -337,10 +337,6 @@ def fuction_conference():
                         cv2.destroyAllWindows()
                         client.send(b'q')
                         sys.exit(0)
-                        
-            
-    
-
 
 def listen_for_messages_from_server(client):
     
@@ -398,21 +394,14 @@ def listen_for_messages_from_server(client):
 
              t = threading.Thread(target=sender.start_stream)
              t.start()
-             
 
              try:
                   while True:
                           continue
              except KeyboardInterrupt:
                  print("Exited!!!")
-
-    
     
     sender.stop_server()
-
-             
-        
-            
 
 # main function
 def main():
